@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import frontImage from "./assets/images/front-image.jpg";
-import backImage from "./assets/images/back-image.jpg"
+import frontImage from "./assets/images/Situation_1front.png";
+import backImage from "./assets/images/Situation_1back.png"
 
 function App() {
   const [isFlipped, setIsFlipped] = useState(false);
