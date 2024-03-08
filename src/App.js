@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './App.css';
 import frontImage1 from "./assets/images/Situation_1front.png";
 import backImage1 from "./assets/images/Situation_1back.png";
@@ -24,25 +23,29 @@ import backImage10 from "./assets/images/Situation_10back.png";
 import Card from './components/Card';
 
 function App() {
-  const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+  const images = [
+    { frontImage: frontImage1, backImage: backImage1 },
+    { frontImage: frontImage2, backImage: backImage2 },
+    { frontImage: frontImage3, backImage: backImage3 },
+    { frontImage: frontImage4, backImage: backImage4 },
+    { frontImage: frontImage5, backImage: backImage5 },
+    { frontImage: frontImage6, backImage: backImage6 },
+    { frontImage: frontImage7, backImage: backImage7 },
+    { frontImage: frontImage8, backImage: backImage8 },
+    { frontImage: frontImage9, backImage: backImage9 },
+    { frontImage: frontImage10, backImage: backImage10 }
+  ];
 
   return (
 
     <div className="App">
-      <Card frontImage={frontImage1} backImage={backImage1}/>
-      <Card frontImage={frontImage2} backImage={backImage2}/>
-      <Card frontImage={frontImage3} backImage={backImage3}/>
-      <Card frontImage={frontImage4} backImage={backImage4}/>
-      <Card frontImage={frontImage5} backImage={backImage5}/>
-      <Card frontImage={frontImage6} backImage={backImage6}/>
-      <Card frontImage={frontImage7} backImage={backImage7}/>
-      <Card frontImage={frontImage8} backImage={backImage8}/>
-      <Card frontImage={frontImage9} backImage={backImage9}/>
-      <Card frontImage={frontImage10} backImage={backImage10}/>
+
+      <div className="card-container">
+        {images.map((image, index) => (
+          <Card key={index} frontImage={image.frontImage} backImage={image.backImage} />
+        ))}
+      </div>
       
     </div>
 
