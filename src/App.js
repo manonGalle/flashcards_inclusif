@@ -11,6 +11,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="flashcard-container" onClick={handleFlip}>
       <div className={`flashcard ${isFlipped ? 'flipped' : ''}`}>
         { isFlipped ?
@@ -23,6 +24,10 @@ function App() {
         }
       </div>
     </div>
+
+    {/*mapper les flashcards*/}
+
+    </>
   );
 }
 
